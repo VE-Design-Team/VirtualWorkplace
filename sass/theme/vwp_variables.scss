@@ -1,12 +1,13 @@
 @import "rmit_variables";
 @import url('https://fonts.googleapis.com/css?family=Manjari|Roboto&display=swap');
-$font-family-sans-serif: 'Roboto', sans-serif !important;
+$font-family-sans-serif: 'Roboto',
+sans-serif !important;
 //For this course
 //Unique colours
-
 //Styles
 $card-border-width: 0.2rem;
-$headings-font-family: 'Manjari', sans-serif;
+$headings-font-family: 'Manjari',
+sans-serif;
 $nav-tabs-border-color: $gray-500 !default;
 $nav-tabs-link-hover-border-color: none !default;
 $nav-tabs-active-text-color: $rmit-red !default;
@@ -38,7 +39,6 @@ $accordion-header-inactive: $rich-area;
 $accordion-header-active: $rmit-blue;
 $accordion-header-active-font: $white;
 $rich-heading-font: $font-family-sans-serif;
-
 $flip-card-front-colour: $white;
 $flip-card-front-text-colour: $gray-900;
 $flip-card-back-colour: $white;
