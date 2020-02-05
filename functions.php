@@ -371,32 +371,12 @@ function post_remove() //creating functions post_remove for removing menu item
 
 //check to see if this site is being used for SCORM or page building and create post types and turn off others in the menu
 
-$scorm_setting = get_field('field_5b8cd3c52f308', 'option');
+//Show SCORM Features
 
-if ($scorm_setting == "iframe") {
-    //show non SCORM features
-    add_action('admin_menu', 'post_remove'); //adding action for triggering function call
-} elseif ($scorm_setting == "cde")  {
-    // Show scorm features
-    add_action( 'init', 'custom_post_type', 0 );
-    add_action('admin_menu', 'post_remove'); //adding action for triggering function call
-} elseif ($scorm_setting == "fssi")  {
-    // Show scorm features
-    add_action( 'init', 'custom_post_type', 0 );
-    add_action('admin_menu', 'post_remove'); //adding action for triggering function call
-} elseif ($scorm_setting == "whm")  {
-    // Show scorm features
-    add_action( 'init', 'custom_post_type', 0 );
-    add_action('admin_menu', 'post_remove'); //adding action for triggering function call
-} elseif ($scorm_setting == "vwp")  {
-    // Show scorm features
-    add_action( 'init', 'custom_post_type', 0 );
+{    // Show scorm features
+    add_action('init', 'custom_post_type', 0);
 }
-elseif ($scorm_setting == "bridge")  {
-    // Show scorm features
-    add_action( 'init', 'custom_post_type', 0 );
-    add_action('admin_menu', 'post_remove'); //adding action for triggering function call
-}
+
 
 // Dashboard content
 
