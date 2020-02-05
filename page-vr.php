@@ -1,1 +1,1 @@
-<?php get_template_part('loop-templates/vr/index');?>
+<?php get_template_part('../../vr/index');?>
