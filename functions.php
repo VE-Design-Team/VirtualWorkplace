@@ -482,7 +482,7 @@ add_filter('show_admin_bar', '__return_false');
 
 function remove_footer_admin()
 {
-    echo '<span id="footer-thankyou">Latest version of this custom Wordpress theme <a href="https://stash.its.rmit.edu.au/users/e37247/repos/rich-content-/" target="_blank">is available here</a></span>';
+    echo '<span id="footer-thankyou">For more information about this project\'/s development <a href="https://github.com/VE-Design-Team/VirtualWorkplace" target="_blank">is available here</a></span>';
 }
 add_filter('admin_footer_text', 'remove_footer_admin');
 
