@@ -441,18 +441,9 @@ add_action('h5p_alter_library_styles', 'H5P_alter_styles', 10, 3);
 
 function rmit_login_logo()
 {?>
-<style type="text/css">
-    #login h1 a,
-    .login h1 a {
-        background-image: url(<?php echo get_stylesheet_directory_uri();
-        ?>/img/rmit-login-logo.png);
-        height: 65px;
-        width: 320px;
-        background-size: 320px 65px;
-        background-repeat: no-repeat;
-        padding-bottom: 30px;
-    }
-</style>
+<link rel="stylesheet" id="login" href="<?php echo get_stylesheet_directory_uri();
+        ?>/css/login.css" type="text/css" media="all">
+
 <?php }
 add_action('login_enqueue_scripts', 'rmit_login_logo');
 
@@ -466,7 +457,7 @@ function rmit_login_logo_url_title()
 {
     return 'An emedia resource';
 }
-add_filter('login_headertitle', 'rmit_login_logo_url_title');
+add_filter('login_headertext', 'rmit_login_logo_url_title');
 
 // remove wordpress from admin bar
 
