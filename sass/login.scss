@@ -1,6 +1,19 @@
 $red: blue;
+body{
+    background: white !important;
+    background-image: url("../vwp/img/splash-corner.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: bottom right !important;
+    background-size: 300px 300px !important;
+    font-family: "Manjari", sans-serif;
+
+}
 h1 {
     color: $red;
+}
+#login{
+
+    width : 80% !important;
 }
 
 #login h1 a,
@@ -15,4 +28,31 @@ h1 {
 
 form#loginform {
     display: none;
+}
+#wp-saml-auth-cta
+{
+    border: none;
+    box-shadow: none !important;
+     p
+    {
+        a.button
+        {
+            background-color: #000094;
+            border-color: #000094;
+            border-radius: 1rem;
+            color: white;
+            font-weight: 700;
+            content: "Login";
+        }
+    }
+   }
+h3{
+    em{
+        display: none;
+    }
+}
+#login{
+    p#backtoblog, p#nav{
+    display: none;
+}
 }
