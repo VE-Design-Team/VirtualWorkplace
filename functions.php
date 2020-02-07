@@ -48,7 +48,7 @@ require get_template_directory() . '/inc/extras.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
- * Load custom WordPress nav walker.
+ * Load custom WordPress nav walker.npm
  */
 require get_template_directory() . '/inc/bootstrap-wp-navwalker.php';
 
@@ -455,7 +455,7 @@ add_filter('login_headerurl', 'rmit_login_logo_url');
 
 function rmit_login_logo_url_title()
 {
-    return 'An emedia resource';
+    return '<div id="bagwan-logo"></div><div id="vr-logo">An emedia resource</div>';
 }
 add_filter('login_headertext', 'rmit_login_logo_url_title');
 
