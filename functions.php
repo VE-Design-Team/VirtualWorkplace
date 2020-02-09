@@ -459,6 +459,12 @@ function rmit_login_logo_url_title()
 }
 add_filter('login_headertext', 'rmit_login_logo_url_title');
 
+/* Add message above login form */
+function wpsd_add_login_message() {
+    return '<div class="bagwan-logo"></div><div class="vr-logo"></div><h3 class="login-title">Welcome to the Bagwan Health Virtual Hospital</h3><p class="login-message">Bagwan Health virtual hospital has been developed to simulate a realistic staff intranet and virtual tour of a hospital.<br> By signing in, you agree to these <a href="https://www.rmit.edu.au/utilities/terms" target="_blank">Terms.</a></p><a href="./wp-login.php?action=wp-saml-auth" class="button mt-5">Login</a><div class="rmit"></div>';
+}
+add_filter('login_message', 'wpsd_add_login_message');
+
 // remove wordpress from admin bar
 
 add_action('admin_bar_menu', 'remove_wp_logo', 999);

@@ -1,19 +1,18 @@
-$red: blue;
-body{
+$rmit-blue: #000054;
+
+body {
     background: white !important;
     background-image: url("../vwp/img/splash-corner.png") !important;
     background-repeat: no-repeat !important;
     background-position: bottom right !important;
     background-size: 300px 300px !important;
-    font-family: "Manjari", sans-serif;
-
+    font-family: "Manjari", sans-serif !important;
+    
 }
-h1 {
-    color: $red;
-}
-#login{
 
-    width : 80% !important;
+#login {
+
+    width: 80% !important;
 }
 
 #login h1 a,
@@ -29,30 +28,94 @@ h1 {
 form#loginform {
     display: none;
 }
-#wp-saml-auth-cta
-{
+
+#wp-saml-auth-cta {
     border: none;
     box-shadow: none !important;
-     p
-    {
-        a.button
-        {
-            background-color: #000094;
-            border-color: #000094;
-            border-radius: 1rem;
-            color: white;
-            font-weight: 700;
-            content: "Login";
+
+    p {
+        a.button {
+            display: none;
         }
     }
-   }
-h3{
-    em{
+
+    p.login-message {}
+}
+
+h3 {
+
+    em {
         display: none;
     }
 }
-#login{
-    p#backtoblog, p#nav{
-    display: none;
+
+#login {
+
+    p#backtoblog,
+    p#nav {
+        display: none;
+    }
+
+    a.button {
+        background-color: $rmit-blue;
+        border-color: $rmit-blue;
+        border-radius: 1.3rem;
+        color: white;
+        font-weight: 700;
+        margin-top: 5rem;
+        font-size: 1rem;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 6rem;
+        padding-top: 0.3rem;
+        
+    }
+
+    .rmit,
+    .vr-logo,
+    .bagwan-logo {
+        width: 6rem;
+        height: 3rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .bagwan-logo {
+        float: left;
+        background-image: url("../vwp/img/splash-bagwan.png") !important;
+        width: 20rem;
+        height: 6rem;
+
+    }
+
+    .vr-logo {
+        float: right;
+        background-image: url("../vwp/img/splash-vr-icon.png") !important;
+        width: 10rem;
+        height: 6rem;
+    }
+
+    .rmit {
+        background-image: url("../vwp/img/splash-rmit.png") !important;
+        width: 10rem;
+        height: 6rem;
+        position: absolute;
+        bottom: 0rem;
+    }
 }
+
+h3.login-title {
+    padding-top: 2rem;
+    font-size: 2rem;
+    clear: left;
+    color: $rmit-blue;
+    border-bottom: 0.2rem solid #AAD75F;
+    margin-bottom: 2rem;
+}
+
+p.login-message {
+    font-size: 1.2rem;
+    color: $rmit-blue;
 }
