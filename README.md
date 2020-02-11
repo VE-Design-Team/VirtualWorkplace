@@ -1,5 +1,8 @@
 # VirtualHospital
 
+
+![Version number](https://img.shields.io/badge/version-1.1.1-red "Version number")
+
 A custom Wordpress theme framework for VEDT's 
 
 ## Getting started

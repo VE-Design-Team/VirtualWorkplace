@@ -69,7 +69,7 @@ h3 {
         margin-left: auto;
         margin-right: auto;
         width: 6rem;
-        padding-top: 0.3rem;
+        padding: 0.4rem 0.4rem 0.3rem 0.4rem;
         
     }
 
@@ -110,6 +110,7 @@ h3.login-title {
     padding-top: 2rem;
     font-size: 2rem;
     clear: left;
+    line-height: initial;
     color: $rmit-blue;
     border-bottom: 0.2rem solid #AAD75F;
     margin-bottom: 2rem;
