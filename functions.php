@@ -439,25 +439,33 @@ add_action('h5p_alter_library_styles', 'H5P_alter_styles', 10, 3);
 
 //custom login logo
 
-function rmit_login_logo()
-{?>
-<link rel="stylesheet" id="login" href="<?php echo get_stylesheet_directory_uri();
-        ?>/css/login.css" type="text/css" media="all">
-
-<?php }
-add_action('login_enqueue_scripts', 'rmit_login_logo');
-
-function rmit_login_logo_url()
+// Get or ignore admin code depending on debug status
+if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+    //do this when in debug mode - ignore SSO login
+} else
+    //get SSO login styles
 {
-    return home_url();
-}
-add_filter('login_headerurl', 'rmit_login_logo_url');
+    function rmit_login_logo()
+    {?>
+    <link rel="stylesheet" id="login" href="<?php echo get_stylesheet_directory_uri();
+            ?>/css/login.css" type="text/css" media="all">
+    
+    <?php }
+    add_action('login_enqueue_scripts', 'rmit_login_logo');
+    
+    function rmit_login_logo_url()
+    {
+        return home_url();
+    }
+    add_filter('login_headerurl', 'rmit_login_logo_url');
+    
+    function rmit_login_logo_url_title()
+    {
+        return '<div id="bagwan-logo"></div><div id="vr-logo">An emedia resource</div>';
+    }
+    add_filter('login_headertext', 'rmit_login_logo_url_title');
 
-function rmit_login_logo_url_title()
-{
-    return '<div id="bagwan-logo"></div><div id="vr-logo">An emedia resource</div>';
-}
-add_filter('login_headertext', 'rmit_login_logo_url_title');
+} 
 
 /* Add message above login form */
 function wpsd_add_login_message() {
