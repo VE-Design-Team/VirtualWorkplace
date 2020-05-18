@@ -86,3 +86,65 @@
 </script>
 
 <?php  get_template_part('footer');?>
+
+<style>
+.body{
+
+  margin:0;
+  font-size:16px;
+}
+.wrapper{
+  background:red;
+}
+
+.container{
+  margin: 0 auto;
+  max-width:1000px;
+  width:100%;
+  padding: 0 15px;
+  box-sizing:border-box;}
+
+.footer{
+  font-size:0.85rem;
+  padding: 20px 0;
+  line-height:1.6;
+  background:#ddefbf;
+  margin:0 auto;
+}
+
+.footer__text{
+  color:#444444;
+  font-family:helvetica;
+  padding:3px 15px;
+  display:block;
+
+}
+
+.footer__hr{
+  height:1px;
+  border:none;
+  background:#aad75f;
+
+}
+
+.a__footer{
+  color:#ee3154;
+}
+
+.a__footer:hover {
+  color:#121741;
+}
+
+p.footer__copy{
+  width:100%;
+ margin:0 auto;}
+</style>
+
+
+<footer class="footer">
+    <div class="footer__text container">
+      <p>RMIT would like to acknowledge Wurundjeri people of the Kulin Nations as the Traditional Owners of the land on which the University stands. We respectfully recognise Elders past, present and future.</p>
+      <p>&copy; Copyright 2020 <a class="a__footer" href="https://www.rmit.edu.au/">RMIT</a> - This website is for educational purose only.</p>
+      <hr class="footer__hr">
+    </div>
+  </footer>
