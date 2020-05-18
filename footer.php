@@ -69,7 +69,7 @@ if ($glossary === "glossary") {
 
 p.footer__copy{
   width:100%;
- margin:0 auto;
+ margin:0 auto;}
 </style>
 <?php
 $glossary_url = get_field('field_5c75d39e68af3', 'option');
