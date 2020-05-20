@@ -12,7 +12,7 @@
 
     <div class="container mt-5">
 
-      <form action="makepdf.php" method="post" class="offset-md-3 col-md-6">
+      <form action="makepdf-pathology.php" method="post" class="offset-md-3 col-md-6">
 
 
 
