@@ -12,7 +12,7 @@ dist-product
 
 npm-debug.log
 
-/vendor/
+
 
 *.zip
 
