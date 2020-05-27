@@ -25,15 +25,7 @@
             class="text-white float-right mt-3" href="./agedcareforms"> Logout</a></div>
 </div>
 
-<head>
-    <script>
-    if (sessionStorage.getItem('authState') === null) {
-        window.location.href = "./agedcareforms"
-    } else {
-        exit()
-    }
-    </script>
-</head>
+
 <div class="content">
     <div class="push mt-5"></div>
     <div class="container p-5 mb-5 page rounded-lg">

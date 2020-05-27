@@ -25,7 +25,7 @@
             class="text-white float-right mt-3" href="login.html"> Logout</a></div>
 </div>
 
-<head></head>
+
 <div class="content">
     <div class="push mt-5"></div>
     <div class="container p-5 mb-5 page rounded-lg">

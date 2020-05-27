@@ -26,13 +26,7 @@
 </div>
 <!--include common/nav-->
 
-<head>
-    <script>
-    if (sessionStorage.getItem('authState') === null) {
-        window.location.href = "./agedcareform"
-    } else exit()
-    </script>
-</head>
+
 
 <body></body>
 <div class="content">
