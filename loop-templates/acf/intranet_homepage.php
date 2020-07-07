@@ -60,7 +60,7 @@ if( have_rows('field_5e1e7ce9bb5ae') ):
 
 $postObject = get_sub_field('field_5e1e83469811d');
 $postURL = get_permalink($postobject->ID);
-echo $postURL;
+//echo $postURL;
 
     endwhile;
 
