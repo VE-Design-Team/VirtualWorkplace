@@ -46,34 +46,6 @@
 <?php endif; ?>
 <a class="btn btn-primary mb-5" href="../../scorm/intranet/news-feed/">Read more staff news</a>
 
-<?php
-
-// check if the repeater field has rows of data
-if( have_rows('field_5e1e7ce9bb5ae') ):
-
- 	// loop through the rows of data
-    while ( have_rows('field_5e1e7ce9bb5ae') ) : the_row();
-
-        // display a sub field value
-
-        the_sub_field('field_5e1e836a9811e');
-
-$postObject = get_sub_field('field_5e1e83469811d');
-$postURL = get_permalink($postobject->ID);
-//echo $postURL;
-
-    endwhile;
-
-else :
-
-    // no rows found
-
-endif;
-
-?>
-
-
-
 </div>
 
 <!-- end get cards-->
