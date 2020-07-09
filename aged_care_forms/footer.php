@@ -1,3 +1,5 @@
+
+<div class="btn">Button</div>
 <!--Footer scripts, delete as required-->
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/aged_care_forms/js/vendor/jquery-2.2.4.min.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/aged_care_forms/js/popper.min.js"></script>

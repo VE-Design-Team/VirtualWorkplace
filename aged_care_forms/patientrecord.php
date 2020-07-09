@@ -1,6 +1,3 @@
-<?php get_template_part( 'aged_care_forms/header' ); ?>
-
-
 <div class="content">
     <div class="push mt-5"></div>
     <div class="container p-5 mb-5 page rounded-lg">
@@ -26,4 +23,3 @@
         </div>
     </div>
 </div>
-<?php get_template_part( 'aged_care_forms/footer' ); ?>
