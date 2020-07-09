@@ -506,22 +506,22 @@ function custom_myme_types($mime_types){
 function custom_post_type() {
 
 	$labels = array(
-		'name'                  => _x( 'SCORM pages', 'Post Type General Name', 'text_domain' ),
-		'singular_name'         => _x( 'SCORM page', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'SCORM pages', 'text_domain' ),
-		'name_admin_bar'        => __( 'SCORM page', 'text_domain' ),
+		'name'                  => _x( 'Intranet pages', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Intranet page', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Intranet pages', 'text_domain' ),
+		'name_admin_bar'        => __( 'Intranet page', 'text_domain' ),
 		'archives'              => __( 'Item Archives', 'text_domain' ),
 		'attributes'            => __( 'Item Attributes', 'text_domain' ),
 		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
-		'all_items'             => __( 'All SCORM pages', 'text_domain' ),
-		'add_new_item'          => __( 'Add New SCORM page', 'text_domain' ),
+		'all_items'             => __( 'All Intranet pages', 'text_domain' ),
+		'add_new_item'          => __( 'Add New Intranet page', 'text_domain' ),
 		'add_new'               => __( 'Add New', 'text_domain' ),
-		'new_item'              => __( 'New SCORM page', 'text_domain' ),
-		'edit_item'             => __( 'Edit SCORM page', 'text_domain' ),
-		'update_item'           => __( 'Update SCORM page', 'text_domain' ),
-		'view_item'             => __( 'View SCORM page', 'text_domain' ),
-		'view_items'            => __( 'View SCORM page', 'text_domain' ),
-		'search_items'          => __( 'Search SCORM page', 'text_domain' ),
+		'new_item'              => __( 'New Intranet page', 'text_domain' ),
+		'edit_item'             => __( 'Edit Intranet page', 'text_domain' ),
+		'update_item'           => __( 'Update Intranet page', 'text_domain' ),
+		'view_item'             => __( 'View Intranet page', 'text_domain' ),
+		'view_items'            => __( 'View Intranet page', 'text_domain' ),
+		'search_items'          => __( 'Search Intranet page', 'text_domain' ),
 		'not_found'             => __( 'Not found', 'text_domain' ),
 		'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
 		'featured_image'        => __( 'Featured Image', 'text_domain' ),
@@ -535,8 +535,8 @@ function custom_post_type() {
 		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
 	);
 	$args = array(
-		'label'                 => __( 'Scorm page', 'text_domain' ),
-		'description'           => __( 'Scorm page generator', 'text_domain' ),
+		'label'                 => __( 'Intranet page', 'text_domain' ),
+		'description'           => __( 'Intranet page generator', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'page-attributes','thumbnail'  ),
 		'hierarchical'          => true,
@@ -646,3 +646,9 @@ class CSS_Menu_Maker_Walker extends Walker {
 
 
   function breadcrumbs($id = null) {}
+
+
+  // Disable PLugin updates nag
+
+  remove_action( 'load-update-core.php', 'wp_update_plugins' );
+  add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return null;" ) );
