@@ -1,6 +1,6 @@
 <div class="content">
 
-    <div class="container p-5 mb-5 page rounded-lg">
+    <div class="container p-5 page rounded-lg">
         <form class="form-horizontal">
             <fieldset>
                 <!-- Form Name-->
