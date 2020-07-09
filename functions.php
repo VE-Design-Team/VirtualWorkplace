@@ -639,16 +639,8 @@ class CSS_Menu_Maker_Walker extends Walker {
     remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
     remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
     remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
-
-
   }
   add_action( 'init', 'disable_wp_emojicons' );
 
 
   function breadcrumbs($id = null) {}
-
-
-  // Disable PLugin updates nag
-
-  remove_action( 'load-update-core.php', 'wp_update_plugins' );
-  add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return null;" ) );
