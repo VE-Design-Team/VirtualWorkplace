@@ -1,9 +1,9 @@
 
 <?php 
-if ( is_page( 'patient-management-system' ) ) {
-     // either in about us, or contact, or management page is in view
-} else {?>
-   <a href="<?php echo get_site_url(); ?>/patient-management-system" title="Back to all forms" alt="Link back to forms menu" class="btn btn-primary ml-3 mt-4"><i class="fab fa-wpforms"></i> Back to all forms </a>
+if ( is_page( 'patient-management-system' ) ) {?>
+    <a href="<?php echo get_site_url(); ?>/scorm/intranet/" title="Back to staff intranet" alt="Links back to Bagwan staff intranet" class="btn btn-primary ml-3 mt-4"><i class="fas fa-home"></i> Bagwan staff intranet </a>
+<?php } else {?>
+   <a href="<?php echo get_site_url(); ?>/patient-management-system" title="Back to all forms" alt="Links back to forms menu" class="btn btn-primary ml-3 mt-4"><i class="fab fa-wpforms"></i> Back to all forms </a>
 <?php
 }
 ?>
