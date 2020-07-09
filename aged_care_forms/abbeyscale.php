@@ -1,5 +1,5 @@
 <div class="content">
-    <div class="push mt-5"></div>
+   
     <div class="container p-5 mb-5 page rounded-lg">
         <legend> Pain - Abbey scale</legend>
         <div id="reset">
@@ -172,8 +172,7 @@
                     class="fas fa-question-circle btn-sm" data-container="body" data-toggle="popover"
                     data-trigger="hover" data-placement="top"
                     data-content="This number is automatically generated from the numbers you record above"></i>
-                <div class="row pt-4 position-inherit float-none"><a class="btn btn-sm btn-primary mr-3"
-                        href="./patientrecord"><i class="fas fa-arrow-left"></i> Back</a><a
+                <div class="row pt-4 position-inherit float-none"><a
                         class="btn btn btn-sm btn-primary mr-2" onclick="checkInputAbbey()"> Download to PDF</a><i
                         class="fas fa-question-circle btn-sm" data-container="body" data-toggle="popover"
                         data-trigger="hover" data-placement="top"

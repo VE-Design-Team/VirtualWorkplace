@@ -1,8 +1,6 @@
-<?php get_template_part( 'aged_care_forms/header' ); ?>
-
 <div class="content">
-    <div class="push mt-5"></div>
-    <div class="container p-5 mb-5 page rounded-lg">
+
+    <div class="container p-5  page rounded-lg">
         <legend>Food and Fluids record <table class="table table-striped table-hover" role="table" id="tablePreview">
                 <thead role="rowgroup">
                     <tr role="row">
@@ -65,8 +63,7 @@
                     </tr>
                 </tbody>
             </table>
-        </legend><a class="btn btn-sm btn-primary mr-3" href="./patientrecord"><i class="fas fa-arrow-left"> </i>
-            Back</a><a class="btn btn btn-sm btn-primary" onclick="checkInput()"> Download to PDF</a><i
+        </legend><a class="btn btn btn-sm btn-primary" onclick="checkInput()"> Download to PDF</a><i
             class="fas fa-question-circle btn-sm pb-3" data-container="body" data-toggle="popover" data-trigger="hover"
             data-placement="top" data-content="Prints the information you recorded into a document"></i>
         <!--a#submit.btn.btn.btn-sm.btn-primary(href='foodrecord.html')  Submit Entries-->
@@ -115,4 +112,3 @@
         </div>
     </div>
 </div>
-<?php get_template_part( 'aged_care_forms/footer' ); ?>

@@ -1,6 +1,6 @@
 <div class="content">
-    <div class="push mt-5"></div>
-    <div class="container p-5 mb-5 page rounded-lg">
+   
+    <div class="container p-5 page rounded-lg">
         <div id="error-message"> </div>
         <legend>Personal care<table class="table table-striped table-hover" role="table" id="tablePreview">
                 <thead role="rowgroup">

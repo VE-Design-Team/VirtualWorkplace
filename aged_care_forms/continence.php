@@ -1,5 +1,5 @@
 <div class="content">
-    <div class="push mt-5"></div>
+
     <div class="container p-5 mb-5 page rounded-lg">
         <form class="form-horizontal">
             <fieldset>
@@ -840,8 +840,7 @@
                             name="story" placeholder="ID" rows="1" cols="16"></textarea></td>
                 </div>
             </tbody>
-        </table><a class="btn btn-sm btn-primary mr-3" href="./patientrecord"><i class="fas fa-arrow-left"> </i>
-            Back</a><a class="btn btn-sm btn-primary" onclick="checkInputCont()"> Download to PDF</a><i
+        </table><a class="btn btn-sm btn-primary" onclick="checkInputCont()"> Download to PDF</a><i
             class="fas fa-question-circle btn-sm pb-3" data-container="body" data-toggle="popover" data-trigger="hover"
             data-placement="top" data-content="Prints the information you have recorded into a PDF document"></i>
     </div>

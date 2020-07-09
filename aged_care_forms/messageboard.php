@@ -1,5 +1,5 @@
 <div class="content">
-    <div class="push mt-5"></div>
+ 
     <div class="container p-5 page rounded-lg">
         <div class="row no-gutters">
             <div class="col-12">

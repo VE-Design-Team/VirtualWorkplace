@@ -1,5 +1,13 @@
 
-<div class="btn">Button</div>
+<?php 
+if ( is_page( 'patient-management-system' ) ) {
+     // either in about us, or contact, or management page is in view
+} else {?>
+   <a href="<?php echo get_site_url(); ?>/patient-management-system" title="Back to all forms" alt="Link back to forms menu" class="btn btn-primary ml-3 mt-4"><i class="fab fa-wpforms"></i> Back to all forms </a>
+<?php
+}
+?>
+
 <!--Footer scripts, delete as required-->
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/aged_care_forms/js/vendor/jquery-2.2.4.min.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/aged_care_forms/js/popper.min.js"></script>
