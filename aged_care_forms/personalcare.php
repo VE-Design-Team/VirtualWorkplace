@@ -40,7 +40,7 @@
                                 <option value="Fingernails">Fingernails</option>
                                 <option value="Toenails">Toenails</option>
                                 <option value="Trolley bath">Trolley bath</option>
-                                <option value="Moisturizer">Moisturizer</option>
+                                <option value="Moisturiser">Moisturiser</option>
                             </select></td>
                         <td role="cell"><textarea class="personalcare form-control" name="story" rows="3"
                                 cols="33"></textarea></td>
