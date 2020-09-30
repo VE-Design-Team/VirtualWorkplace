@@ -437,7 +437,7 @@ function H5P_alter_styles(&$styles, $libraries, $embed_type)
 }
 add_action('h5p_alter_library_styles', 'H5P_alter_styles', 10, 3);
 
-//custom login logo
+
 
 // Get or ignore admin code depending on debug status
 if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
@@ -446,9 +446,12 @@ if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
     //get SSO login styles
 {
     function rmit_login_logo()
-    {?>
+    {
+        wp_dequeue_style( 'login' );
+        ?>
     <link rel="stylesheet" id="login" href="<?php echo get_stylesheet_directory_uri();
             ?>/css/login.css" type="text/css" media="all">
+            
     
     <?php }
     add_action('login_enqueue_scripts', 'rmit_login_logo');
@@ -456,12 +459,14 @@ if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
     function rmit_login_logo_url()
     {
         return home_url();
+        echo get_template_part( 'loop-templates/login' );
     }
     add_filter('login_headerurl', 'rmit_login_logo_url');
     
     function rmit_login_logo_url_title()
     {
         return '<div id="bagwan-logo"></div><div id="vr-logo">An emedia resource</div>';
+        
     }
     add_filter('login_headertext', 'rmit_login_logo_url_title');
 
@@ -469,7 +474,7 @@ if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
 
 /* Add message above login form */
 function wpsd_add_login_message() {
-    return '<div class="bagwan-logo"></div><div class="vr-logo"></div><h3 class="login-title">Welcome to the Bagwan Health Virtual Hospital</h3><p class="login-message">Bagwan Health virtual hospital has been developed to simulate a realistic staff intranet and virtual tour of a hospital.<br> By signing in, you agree to these <a href="https://www.rmit.edu.au/utilities/terms" target="_blank">Terms.</a></p><a href="./wp-login.php?action=wp-saml-auth" class="button mt-5">Login</a><div class="rmit"></div>';
+    return '<div class="bagwan-logo"></div><div class="vr-logo"></div><h3 class="login-title">Welcome to the Bagwan Health Virtual Hospital</h3><p class="login-message">Bagwan Health virtual hospital has been developed to simulate a realistic staff intranet and a virtual tour of a hospital.<br><br> By signing in, you agree to these <a href="https://www.rmit.edu.au/utilities/terms" target="_blank">Terms.</a></p><a href="./wp-login.php?action=wp-saml-auth" class="button mt-5">Login</a><div class="rmit"></div>';
 }
 add_filter('login_message', 'wpsd_add_login_message');
 
@@ -506,22 +511,22 @@ function custom_myme_types($mime_types){
 function custom_post_type() {
 
 	$labels = array(
-		'name'                  => _x( 'Intranet pages', 'Post Type General Name', 'text_domain' ),
-		'singular_name'         => _x( 'Intranet page', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'Intranet pages', 'text_domain' ),
-		'name_admin_bar'        => __( 'Intranet page', 'text_domain' ),
+		'name'                  => _x( 'SCORM pages', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'SCORM page', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'SCORM pages', 'text_domain' ),
+		'name_admin_bar'        => __( 'SCORM page', 'text_domain' ),
 		'archives'              => __( 'Item Archives', 'text_domain' ),
 		'attributes'            => __( 'Item Attributes', 'text_domain' ),
 		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
-		'all_items'             => __( 'All Intranet pages', 'text_domain' ),
-		'add_new_item'          => __( 'Add New Intranet page', 'text_domain' ),
+		'all_items'             => __( 'All SCORM pages', 'text_domain' ),
+		'add_new_item'          => __( 'Add New SCORM page', 'text_domain' ),
 		'add_new'               => __( 'Add New', 'text_domain' ),
-		'new_item'              => __( 'New Intranet page', 'text_domain' ),
-		'edit_item'             => __( 'Edit Intranet page', 'text_domain' ),
-		'update_item'           => __( 'Update Intranet page', 'text_domain' ),
-		'view_item'             => __( 'View Intranet page', 'text_domain' ),
-		'view_items'            => __( 'View Intranet page', 'text_domain' ),
-		'search_items'          => __( 'Search Intranet page', 'text_domain' ),
+		'new_item'              => __( 'New SCORM page', 'text_domain' ),
+		'edit_item'             => __( 'Edit SCORM page', 'text_domain' ),
+		'update_item'           => __( 'Update SCORM page', 'text_domain' ),
+		'view_item'             => __( 'View SCORM page', 'text_domain' ),
+		'view_items'            => __( 'View SCORM page', 'text_domain' ),
+		'search_items'          => __( 'Search SCORM page', 'text_domain' ),
 		'not_found'             => __( 'Not found', 'text_domain' ),
 		'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
 		'featured_image'        => __( 'Featured Image', 'text_domain' ),
@@ -535,8 +540,8 @@ function custom_post_type() {
 		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
 	);
 	$args = array(
-		'label'                 => __( 'Intranet page', 'text_domain' ),
-		'description'           => __( 'Intranet page generator', 'text_domain' ),
+		'label'                 => __( 'Scorm page', 'text_domain' ),
+		'description'           => __( 'Scorm page generator', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'page-attributes','thumbnail'  ),
 		'hierarchical'          => true,
@@ -639,6 +644,9 @@ class CSS_Menu_Maker_Walker extends Walker {
     remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
     remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
     remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+
+    // filter to remove TinyMCE emojis
+    add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
   }
   add_action( 'init', 'disable_wp_emojicons' );
 
