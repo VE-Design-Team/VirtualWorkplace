@@ -1,5 +1,5 @@
 <div class="content">
-   
+
     <div class="container p-5 page rounded-lg">
         <legend> Pain - Abbey scale</legend>
         <div id="reset">

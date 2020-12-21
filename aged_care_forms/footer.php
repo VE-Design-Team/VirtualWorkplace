@@ -1,5 +1,5 @@
 
-<?php 
+<?php
 if ( is_page( 'patient-management-system' ) ) {?>
     <a href="<?php echo get_site_url(); ?>/scorm/intranet/" title="Back to staff intranet" alt="Links back to Bagwan staff intranet" class="btn btn-primary ml-3 mt-4"><i class="fas fa-home"></i> Bagwan staff intranet </a>
 <?php } else {?>
@@ -26,6 +26,7 @@ if ( is_page( 'patient-management-system' ) ) {?>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/aged_care_forms/js/personalcare.js"> </script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/aged_care_forms/js/continence.js"> </script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/aged_care_forms/js/abbeyscale.js"> </script>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/aged_care_forms/js/testform.js"> </script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/aged_care_forms/js/messageboard.js"> </script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/aged_care_forms/js/jquery.sumoselect.min.js"> </script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/aged_care_forms/js/bootstrap.min.js"> </script>
