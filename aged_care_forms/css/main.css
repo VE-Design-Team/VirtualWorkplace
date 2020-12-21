@@ -278,6 +278,55 @@ body {
         content: "Time"
     }
 }
+tbody.incident td:nth-of-type(1):before {
+    content: "Date"
+}
+
+tbody.incident td:nth-of-type(2):before {
+    content: "Time"
+}
+
+tbody.incident td:nth-of-type(3):before {
+    content: "xxxx"
+}
+
+tbody.incident td:nth-of-type(4):before {
+    content: "TextArea"
+}
+
+tbody.incident td:nth-of-type(5):before {
+    content: "DropDown"
+}
+
+tbody.incident td:nth-of-type(6):before {
+    content: "Multiselect"
+}
+
+tbody.incident td:nth-of-type(7):before {
+    content: "Role"
+}
+
+tbody.incident .SumoSelect {
+    width: 100%
+}
+
+#tablePreviewIncident .SumoSelect {
+    display: block;
+    width: 100%
+}
+
+#tablePreviewIncident label.title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: none
+}
+
+@media only screen and (max-width: 992px) {
+    #tablePreviewIncident label.title {
+        display: block
+    }
+}
+
 
 #tablePreviewAbbey .SumoSelect {
     display: block;
